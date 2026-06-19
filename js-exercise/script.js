@@ -1,5 +1,6 @@
 const scrn = document.getElementById("screen");
 const btns = document.querySelectorAll('.btn');
+const ops = ['+', '-', '*', '/'];
 let expr = "";
 
 function updateScreen() {
@@ -7,7 +8,7 @@ function updateScreen() {
 }
 
 function isOperator(ch) {
-  return ['+', '-', '*', '/'].includes(ch);
+  return ops.includes(ch);
 }
 
 function getLastNumber() {
@@ -39,7 +40,7 @@ btns.forEach(btn => {
       return;
     }
 
-    if ( ["+","-","-","x"].includes(val)) {
+    if (ops.includes(val)) {
       const op = val === 'x' ? '*' : val;
       const last = expr.slice(-1);
       if (expr === '' && op !== '-') {
@@ -65,7 +66,7 @@ btns.forEach(btn => {
       }
       while (isOperator(expr.slice(-1))) expr = expr.slice(0, -1);
       try {
-        const result = eval(expr);
+        const result = eval(expr); // avoid using eval() 
         expr = String(result);
       } catch (err) {
         expr = '';

@@ -5,20 +5,18 @@
 
 body {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .container {
-  width: 250px;
+  width: 300px;
   background-color: rgb(3, 220, 220);
   padding: 12px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   border: 4px solid rgb(103, 26, 26);
   border-radius: 8px;
 }
@@ -26,6 +24,7 @@ body {
 .screen {
   width: 100%;
   height: 20%;
+  font-size: 1.2rem;
   background: bisque;
   border: 4px solid rgb(103, 26, 26);
   border-radius: 8px;
@@ -35,18 +34,21 @@ body {
 
 .row {
   width: 100%;
-  color: blue;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 15px;
+  gap: 10px;
 }
 
 .btn {
-  width: 50px;
-  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  color: blue;
   background-color: bisque;
-  text-align: center;
+  font-size: 1.2rem;
   border: 4px solid rgb(103, 26, 26);
   border-radius: 8px;
   margin: 2px;
