@@ -8,4 +8,4 @@
 
 # Exercise Tailwindcss
 
-! [Page 1 Screenshot](assets/fotobook_page.png)
+![Page 1 Screenshot](assets/fotobook_page.png)
